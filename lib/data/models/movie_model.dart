@@ -4,7 +4,7 @@ class MovieModel extends MovieEntity {
   final int id;
   final bool video;
   final int voteCount;
-  final num voteAverage;
+  final double voteAverage;
   final String title;
   final String releaseDate;
   final String originalLanguage;
@@ -39,7 +39,6 @@ class MovieModel extends MovieEntity {
             backdropPath: backdropPath,
             posterPath: posterPath,
             releaseDate: releaseDate,
-            voteAvarage: voteAvarage,
             overview: overview);
 
   factory MovieModel.fromJson(Map<String, dynamic> json) {
