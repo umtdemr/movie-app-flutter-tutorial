@@ -1,31 +1,13 @@
-# Movie APP flutter
-
-## Equatable
-
-we need hashcode for == operator in class. We can extend equatable class for == operator
-
-## Dartz
-
-Error handling left and right :)
-
-## get it
-
-Dependenct injection
-
-```dart
-ApiClient apiClient = ApiClient(Client());
-MovieRemoteDataSource dataSource = MovieRemoteDataSourceImpl(apiClient);
-MovieRepository movieRepository = MovieRepositoryImpl(dataSource);
-GetTrending getTrending = GetTrending(movieRepository);
-
-
-// Yerine:
-
-unawaited(getIt.init());
-GetTrending getTrending = getIt.getItInstance<GetTrending>();
-
-
-// di/get_it.dart
+import 'package:get_it/get_it.dart';
+import 'package:http/http.dart';
+import 'package:movieapp/data/core/api_client.dart';
+import 'package:movieapp/data/data_sources/movie_remote_data_source.dart';
+import 'package:movieapp/data/repositories/movie_repository_impl.dart';
+import 'package:movieapp/domain/repositories/movie_repositories.dart';
+import 'package:movieapp/domain/usecases/get_coming_soon.dart';
+import 'package:movieapp/domain/usecases/get_playing_now.dart';
+import 'package:movieapp/domain/usecases/get_popular.dart';
+import 'package:movieapp/domain/usecases/get_trending.dart';
 
 final getItInstance = GetIt.I;
 
@@ -48,5 +30,3 @@ Future init() async {
   getItInstance.registerLazySingleton<MovieRepository>(
       () => MovieRepositoryImpl(getItInstance()));
 }
-
-```
