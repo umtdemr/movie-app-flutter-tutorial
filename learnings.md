@@ -50,3 +50,23 @@ Future init() async {
 }
 
 ```
+
+
+## Oriantation
+
+```dart
+WidgetsFlutterBinding.ensureInitialized();
+  unawaited(
+      SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]));
+  unawaited(getIt.init());
+```
+
+
+## Screen util
+
+Screen util githubdan ekledik daha sonra extensions ve constants olarak commonda belireldik
+
+
+## Bloc
+
+flutter_bloc ekledik daha sonra ise vs code da bloc eklentisini kullanarak presentation/blocs içersisinde sağ tık ile bloc oluşturduk
