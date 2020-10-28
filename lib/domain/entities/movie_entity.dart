@@ -6,7 +6,7 @@ class MovieEntity extends Equatable {
   final int id;
   final String backdropPath;
   final String title;
-  final double voteAvarage;
+  final double voteAverage;
   final String releaseDate;
   final String overview;
 
@@ -15,7 +15,7 @@ class MovieEntity extends Equatable {
       @required this.id,
       @required this.backdropPath,
       @required this.title,
-      @required this.voteAvarage,
+      @required this.voteAverage,
       @required this.releaseDate,
       this.overview})
       : assert(id != null, 'Moive id must not be null');

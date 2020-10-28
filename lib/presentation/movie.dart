@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:movieapp/common/screenutil/screenutil.dart';
+import 'package:movieapp/presentation/journeys/home/home_screen.dart';
 import 'package:movieapp/presentation/themes/theme_color.dart';
 import 'package:movieapp/presentation/themes/theme_text.dart';
 
 class MovieApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    ScreenUtil.init(context);
+    ScreenUtil.init();
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Movie App',

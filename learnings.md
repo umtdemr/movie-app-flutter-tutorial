@@ -70,3 +70,7 @@ Screen util githubdan ekledik daha sonra extensions ve constants olarak commonda
 ## Bloc
 
 flutter_bloc ekledik daha sonra ise vs code da bloc eklentisini kullanarak presentation/blocs içersisinde sağ tık ile bloc oluşturduk
+
+### Event
+  
+when users come to screen
