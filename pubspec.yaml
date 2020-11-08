@@ -35,7 +35,9 @@ dependencies:
   flutter_bloc: ^6.0.6
   flutter_svg: ^0.19.1
   cached_network_image: ^2.2.0+1
-
+  wiredash: ^0.2.0
+  flutter_localizations:
+    sdk: flutter
 
 dev_dependencies:
   flutter_test:
@@ -55,6 +57,7 @@ flutter:
   assets:
     - assets/svgs/
     - assets/pngs/
+    - assets/languages/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
