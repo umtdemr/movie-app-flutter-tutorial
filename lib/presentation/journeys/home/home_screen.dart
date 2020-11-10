@@ -5,6 +5,7 @@ import 'package:movieapp/presentation/blocs/movie_backdrop/movie_backdrop_bloc.d
 import 'package:movieapp/presentation/blocs/movie_carousel/movie_carousel_bloc.dart';
 import 'package:movieapp/presentation/blocs/movie_tabbed/movie_tabbed_bloc.dart';
 import 'package:movieapp/presentation/journeys/drawer/navigation_drawer.dart';
+import 'package:movieapp/presentation/journeys/home/movie_carousel/carouse_load_error_widget.dart';
 import 'package:movieapp/presentation/journeys/home/movie_tabbed/movie_tabbed_widget.dart';
 import 'movie_carousel/movie_carousel_widget.dart';
 
@@ -70,9 +71,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ],
               );
-            } else {
-              return const SizedBox.shrink();
+            } else if (state is MovieCarouselError) {
+              return AppErrorWidget(
+                onPressed: () => movieCarouselBloc.add(CarouselLoadEvent()),
+                errorType: state.errorType,
+              );
             }
+            return const SizedBox.shrink();
           },
         ),
       ),
