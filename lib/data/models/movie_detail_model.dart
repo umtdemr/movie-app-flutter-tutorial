@@ -67,7 +67,7 @@ class MovieDetailModel extends MovieDetailEntity {
     return MovieDetailModel(
       adult: json['adult'],
       backdropPath: json['backdrop_path'],
-      belongsToCollection: json['belongs_to_collection'],
+      // belongsToCollection: json['belongs_to_collection'],
       budget: json['budget'],
       genres: _genres(json),
       homepage: json['homepage'],
